@@ -1,0 +1,222 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even Odd Image Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .image-container {
+            margin-top: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 300px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .GIF{
+position: relative;
+TOP:1000PX;
+        }
+    </style>
+</head>
+<body>
+    <CENTER><div class="image-container">
+        <img id="resultImage" src="TOSS.png" alt="Result Image">
+    </div>
+    <button id="generateButton">GO</button></CENTER>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const generateButton = document.getElementById('generateButton');
+            const resultImage = document.getElementById('resultImage');
+            const loadingGif = 'loading.gif';
+
+            generateButton.addEventListener('click', function() {
+                // Display loading GIF
+                resultImage.src = loadingGif;
+
+                // Generate a random number between 1 and 100 in JavaScript
+                const randomNum = Math.floor(Math.random() * 100) + 1;
+
+                const imageUrl = (randomNum % 2 === 0) ? 'even.png' : 'odd.png';
+
+                // Delay displaying the result image for 3 seconds
+                setTimeout(() => {
+                    resultImage.src = imageUrl;
+                }, 3000);
+            });
+        });
+    </script>
+</body>
+</html>-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even Odd Image Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif,Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Ensure the content takes up the full viewport height */
+            margin: 0; /* Remove default margin */
+            background:url("background.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            backdrop-filter: blur(5px);
+        }
+
+        .image-container {
+            margin-top: 20px;
+        }
+
+        img {
+            max-width: 80%;
+            max-height: 300px;
+            display: block;
+            margin: auto; /* Center the image horizontally */
+            position: relative;
+            top:-50px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /*button*/
+
+        
+/*<button class="button-30" role="button">Button 30</button>*/
+
+/* CSS */
+.button-30 {
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  top:-30px;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.button-30:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button-30:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-30:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.nav{
+    background-color: black;
+    color:#D6D6E7;
+    padding:20px;
+    width:100%;
+    height:20px;
+    position: fixed;
+    top:-20px;
+}
+
+footer{
+    padding:50px;
+    background-color: black;
+    color:#D6D6E7;
+    position:absolute;
+    bottom:0px;
+    width:100%;
+}
+    </style>
+</head>
+<body>
+
+    <h2 style="color:white;" class="nav">TOSS THE COIN</h2><br><br>
+
+    <div class="image-container">
+        
+      
+        <img id="resultImage" src="TOSS.png" alt="Result Image">
+    </div>
+    <button id="generateButton" class="button-30">LET'S GO</button>
+
+    <footer>
+        Developed by R JEROSE BROWNY<br><br>Date : 20-01-2024
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const generateButton = document.getElementById('generateButton');
+            const resultImage = document.getElementById('resultImage');
+            const loadingGif = 'loading.gif';
+
+            generateButton.addEventListener('click', function() {
+                // Display loading GIF
+                resultImage.src = loadingGif;
+
+                // Generate a random number between 1 and 100 in JavaScript
+                const randomNum = Math.floor(Math.random() * 100) + 1;
+
+                const imageUrl = (randomNum % 2 === 0) ? 'even.png' : 'odd.png';
+
+                // Delay displaying the result image for 3 seconds
+                setTimeout(() => {
+                    resultImage.src = imageUrl;
+                }, 3000);
+            });
+        });
+    </script>
+
+    
+</body>
+</html>
+
